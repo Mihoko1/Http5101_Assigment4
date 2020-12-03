@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Http5101_Assigment4.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="containerbox">
+    <nav>
+        <a class="dellink" href="/Teacher/New">New Teacher</a>
+
+    </nav>
+
+    <h2>Teacher List</h2>
+
+    <form action="/Teacher/List" medhod="GET">
+        <input type="text" name="Searchkey" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Employee Number</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var teacher in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        @teacher.TeacherId
+                    </th>
+                    <td>
+                        <a href="/Teacher/Show/@teacher.TeacherId">@teacher.EmployeeNumber</a>
+                    </td>
+                    <td>
+                        <a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a>
+                    </td>
+
+                </tr>
+
+            }
+
+
+        </tbody>
+    </table>
+
+</div>
