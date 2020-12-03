@@ -17,31 +17,88 @@ textarea {
 }
 
 #containerbox{
-    width:80%;
+    width:100%;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 nav{
     overflow: hidden;
     margin-bottom: 30px;
+
 }
 
 .navlink{
-    float:right;
+    float:left;
 }
 
 .dellink {
-    float: left;
+    float: right;
+    background-color:red;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    text-decoration: none;
+}
+
+.cancellink{
+    float:right;
+}
+
+.dellink:hover {
+    background-color: crimson;
+    color: #fff;
+    text-decoration: none;
 }
 
 .delButton {
-   display:block; 
-   margin:0 auto; 
-   background-color:#ff0000;
-   color:#ffffff; 
-   border: 1px solid #000;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+    padding: 5px 20px;
+    color: #ffffff;
+    border: none;
+    margin: 40px auto;
 }
 
+.delButton:hover {
+    background-color: crimson;
+    color: #ffffff;
+}
+
+.align {
+    display:flex; 
+    align-items:center;
+}
+
+.align a{
+    background-color:cadetblue;
+    color:#fff;
+    padding:5px 20px;
+    border:none;
+    text-decoration:none;
+}
+
+.align h2 {
+    margin-right:30px;
+}
+
+
+.align a:hover {
+    background-color:darkcyan;
+   
+}
+
+.searchForm {
+    margin-top: 20px;
+}
+
+.list, .marginTop {
+    margin-top:20px
+}
+
+.addForm{
+    width:60%;
+}
 
 

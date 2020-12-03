@@ -3,48 +3,34 @@
     ViewBag.Title = "List";
 }
 
-<div class="containerbox">
-    <nav>
-        <a class="dellink" href="/Teacher/New">New Teacher</a>
 
-    </nav>
+<div id="containerbox">
 
-    <h2>Teacher List</h2>
+    <div class="align">
+        <h2>Teacher List</h2>
+        <nav>
+            <a class="dellink" href="/Teacher/New">Add Teacher</a>
+        </nav>
 
-    <form action="/Teacher/List" medhod="GET">
+    </div>
+
+    <form class="searchForm" action="/Teacher/List" medhod="GET">
         <input type="text" name="Searchkey" />
         <input type="submit" value="Search" />
     </form>
 
-    <table class="table table-sm">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Employee Number</th>
-                <th scope="col">Name</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="list">
 
-            @foreach (var teacher in Model)
-            {
-                <tr>
-                    <th scope="row">
-                        @teacher.TeacherId
-                    </th>
-                    <td>
-                        <a href="/Teacher/Show/@teacher.TeacherId">@teacher.EmployeeNumber</a>
-                    </td>
-                    <td>
-                        <a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a>
-                    </td>
+        @foreach (var teacher in Model)
+        {
+            <div>
 
-                </tr>
+                <a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a>
 
-            }
+            </div>
 
+        }
 
-        </tbody>
-    </table>
+    </div>
 
 </div>
